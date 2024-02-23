@@ -6,39 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-  
-        <div class="row justify-content-center">
-          
-          <div class="col-md-8">
-            <h1 class="text-center mt-5">Weather</h1>
-            
-            <div class="text-center">
-              <span id="ville">paris</span>
-              
-              <div id="temperature">
-                <span id="temperature_label">
-                  xx.x
-                </span> °C
-              </div>
-            </div>
+      <div>
+        <h1 class="titre">Weather</h1>
+        
+        <div class="text-center">
+          <div class="ville-container">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="ville"> Casablanca</span>
           </div>
           
-        </div>
-        
-        <div class="row justify-content-center">  
-          <div class="col-md-8 text-center">
-            <div id="changer" class="mt-2 text-center p-3 text-white font-weight-bold text-uppercase d-inline-block">
-              change city
-            </div>
+          <div class="temperature">
+            <span class="temperature_label">xx.x</span> °C
           </div>
-          
         </div>
-        
+      
+    </div>
+    
+    <div>  
+      <div>
+        <button class="changer">change city</button>
       </div>
+      </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/224933734a.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>

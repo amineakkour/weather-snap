@@ -1,28 +1,43 @@
-html, body {
-    background: #2980B9;
-    background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
-    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
-    min-width: 400px;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-  body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-  
-  #ville {
-    text-transform: capitalize;
-  }
-  
-  #temperature {
-    font-size: 4em;
-  }
-  
-  #changer {
-    background: rgba(178, 223, 251, .3);
-    cursor: pointer;
-  }
-  #change:hover{
-    background: rgba(178, 223, 251, .5);
-  }
+:root{
+  --first-color: #0FB2F2;
+  --second-color: #77CFF2;
+  --white-color: #BDE3F2;
+  --black-color: black;
+}
+
+body{
+  background-image: linear-gradient(90deg, var(--first-color), var(--second-color));
+  font-family: "Roboto", sans-serif;
+  color: var(--black-color);
+}
+
+.container{
+  text-align: center;
+}
+
+.container > *{
+  margin: 15px 0;
+}
+
+.titre{
+  font-size: 50px;
+}
+
+.ville{
+  font-weight: bolder;
+}
+
+.temperature{
+  font-size: 50px;
+}
+
+button.changer{
+  background-color: var(--white-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}

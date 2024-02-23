@@ -1,7 +1,7 @@
-let villeChoisie = "paris";
+let villeChoisie = "casablanca";
 recevoirTemperature(villeChoisie);
 
-let changerDeVille = document.querySelector('#changer');
+let changerDeVille = document.querySelector('.changer');
 changerDeVille.addEventListener('click', () => {
   villeChoisie = prompt('¨Please insert a city: ');
   recevoirTemperature(villeChoisie);
@@ -23,8 +23,8 @@ function recevoirTemperature(ville) {
         let temperature = reponse.main.temp;
         let ville       = reponse.name;
         
-        document.querySelector('#temperature_label').textContent = temperature;
-        document.querySelector('#ville').textContent = ville;
+        document.querySelector('.temperature_label').textContent = temperature;
+        document.querySelector('.ville').textContent = ville;
       }
       else {
         alert('Something went wrong, please come back later.');
