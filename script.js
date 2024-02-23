@@ -1,3 +1,5 @@
+var imgURL = ""
+
 let villeChoisie = "casablanca";
 recevoirTemperature(villeChoisie);
 
@@ -39,11 +41,13 @@ function recevoirTemperature(ville) {
         
         let temperature = reponse.main.temp;
         let ville       = reponse.name;
-        let country = reponse.sys.country
+        let countryCode = reponse.sys.country
+        imgURL = "https://flagsapi.com/" + countryCode + "/shiny/32.png"
         
         document.querySelector('.temperature_label').textContent = temperature;
         document.querySelector('.ville').textContent = ville;
-        document.querySelector('.pays').textContent = country;
+        document.querySelector('.pays').textContent = countryCode;
+        document.querySelector(".flag").setAttribute("src", imgURL)
       }
       else {
         villeChoisie = exVille
