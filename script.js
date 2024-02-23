@@ -8,7 +8,7 @@ let retourButon = document.querySelector('.back');
 let exVille = ""
 
 setInterval(() => {
-  if(villeChoisie === "casablanca"){
+  if(villeChoisie.toLowerCase() === "casablanca"){
     retourButon.classList.add("invisible")
   }else{
     retourButon.classList.remove("invisible")
