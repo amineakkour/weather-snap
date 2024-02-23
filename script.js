@@ -3,6 +3,7 @@ recevoirTemperature(villeChoisie);
 
 let changerDeVille = document.querySelector('.changer');
 let retourButon = document.querySelector('.back');
+let exVille = ""
 
 setInterval(() => {
   if(villeChoisie === "casablanca"){
@@ -18,6 +19,7 @@ retourButon.addEventListener('click', () => {
 });
 
 changerDeVille.addEventListener('click', () => {
+  exVille = villeChoisie
   villeChoisie = prompt('¨Please insert a city: ');
   recevoirTemperature(villeChoisie);
 });
@@ -37,11 +39,14 @@ function recevoirTemperature(ville) {
         
         let temperature = reponse.main.temp;
         let ville       = reponse.name;
+        let country = reponse.sys.country
         
         document.querySelector('.temperature_label').textContent = temperature;
         document.querySelector('.ville').textContent = ville;
+        document.querySelector('.pays').textContent = country;
       }
       else {
+        villeChoisie = exVille
         alert('Something went wrong, please come back later.');
       }
     }
