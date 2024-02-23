@@ -2,6 +2,21 @@ let villeChoisie = "casablanca";
 recevoirTemperature(villeChoisie);
 
 let changerDeVille = document.querySelector('.changer');
+let retourButon = document.querySelector('.back');
+
+setInterval(() => {
+  if(villeChoisie === "casablanca"){
+    retourButon.classList.add("invisible")
+  }else{
+    retourButon.classList.remove("invisible")
+  }
+}, 100);
+
+retourButon.addEventListener('click', () => {
+  recevoirTemperature("casablanca");
+  villeChoisie = "casablanca"
+});
+
 changerDeVille.addEventListener('click', () => {
   villeChoisie = prompt('¨Please insert a city: ');
   recevoirTemperature(villeChoisie);

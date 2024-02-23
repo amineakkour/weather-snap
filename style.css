@@ -33,11 +33,20 @@ body{
   font-size: 50px;
 }
 
-button.changer{
+.btns button{
   background-color: var(--white-color);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: 1px solid transparent;
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 3px;
+  transition: .8s all;
+}
+
+.btns button:hover{
+  background-color: white;
+}
+
+button.invisible{
+  display: none;
 }
